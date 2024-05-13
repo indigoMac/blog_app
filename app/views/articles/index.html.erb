@@ -11,13 +11,15 @@
     </tr>
   </thead>
   <tbody>
-    <% @articles.each do |article| %>
-    <tr>
-      <td><%= link_to article.title, article_path(article) %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to "Edit", edit_article_path(article) %> </td>
-      <td><%= button_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "button-link" %></td>
-    </tr>
+    <% if @articles.present? %>
+      <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.title, article_path(article) %></td>
+        <td><%= article.description %></td>
+        <td><%= link_to "Edit", edit_article_path(article) %> </td>
+        <td><%= button_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "button-link" %></td>
+      </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
