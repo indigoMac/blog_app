@@ -1,4 +1,5 @@
 import { Application } from "@hotwired/stimulus"
+import "./confirm" // Assuming the file is named confirm.js
 
 const application = Application.start()
 

@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ .button-link {
+   background: none!important;
+   border: none;
+   padding: 0!important;
+   /*optional:*/
+   font-family: arial, sans-serif; /* matches button font to link font */
+   color: #069;
+   text-decoration: underline;
+   cursor: pointer;
+ }
+
+ .button-link:hover {
+   text-decoration: none;
+ }
